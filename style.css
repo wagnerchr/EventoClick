@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(/style/images/kien-do-NjT4O7WYmwk-unsplash.jpg) ;
+    background-size:cover;
+    background-repeat: no-repeat;   
+    height: 100vh;
+    align-items: center;
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell
+}
+
+.box {
+    margin-top: 100px;
+    text-align: center;
+}
+
+h1 {
+    margin: 10px;
+    font-weight: bold;
+}
+h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+button {
+    border: none;
+    width: 200px;
+    margin: 5px;
+    height: 50px;
+
+    color: white;
+}
+
+.btn-increment {
+    border: 1px solid gray;
+    background-color: darkgray;
+}
+
+.btn-save {
+    border: 1px solid gray;
+    background-color: darkcyan ;
+}
