@@ -8,12 +8,19 @@ body {
     background-size:cover;
     background-repeat: no-repeat;   
     height: 100vh;
-    align-items: center;
+    
+    
 
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell
 }
 
 .box {
+    margin: auto;   /*Okay, o margin: auto; deixa esse "container" no centro */
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+
+    
     margin-top: 100px;
     text-align: center;
 }
@@ -49,6 +56,12 @@ button {
 }
 
 p {
-    
+    text-align: left;
     font-weight: bold;
+}
+
+@media only screen and (max-width: 500px) {
+ .box {
+     width: 250px;
+ }    
 }
