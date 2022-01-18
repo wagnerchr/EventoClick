@@ -15,5 +15,5 @@ function save() {
     saveP.textContent += counterStr
     count = 0;
     counter.innerText = count;
-    // aparece a poha do código
+    
 }
