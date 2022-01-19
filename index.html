@@ -8,18 +8,24 @@
     <link rel="stylesheet" href="style.css">
     <title>Click Event</title>
 </head>
+
 <body>
     <div class="box">
         <h1> Acrescente um Número</h1>
-        <h2 id="counter"> 0 </h2>
-    <div class="buttons">
-        <button class="btn-increment" onclick="increment()">Acresentar</button>
-        <button class="btn-save" onclick="save()">Salvar</button>
-   
-        <p id="p-save">Últimas entradas: </p>
+        
+        <!-- Contador -->
+        <div class="shows">
+            <h2 id="counter" > 0 </h2>
+            <button class="btn-arrow" onclick="erase()"><-</button>
+        </div>
+        <!-- Botões -->
+        <div class="buttons">
+            <button class="btn-increment" onclick="increment()">Acresentar</button>
+            <button class="btn-save" onclick="save()">Salvar</button>
+            <p id="p-save">Últimas entradas: </p>
+        </div>
     </div>
-    </div>
-    
-    <script src="index.js"></script>
+
+<script src="index.js"></script>
 </body>
 </html>
