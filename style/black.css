@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body  {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.image {
+    background-image: url(/style/images/fundo-blackJack.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+
+    color: white;
+    font-weight: bold;
+}
+.box2 {
+    width: 500px;
+    margin: auto; /* De novo, margin auto para deixar no meio */
+    display: flex;
+
+    justify-content: center;
+    margin-top: 150px;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    align-items: center;
+
+    font-size: 50px;
+    margin: 10px;
+
+    display: block;
+
+}
+
+p {
+    align-items: center;
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+.cards {
+    margin-top: 30px;
+}
+
+
+.btn-start {
+    width:150px;
+    height: 50px;
+    color: white;
+    background-color: darkgreen;
+    padding: 5px 0 5px ;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 2px;
+
+    margin-bottom:10px;
+    justify-content: center;
+    align-items: center;
+}
