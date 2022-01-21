@@ -41,7 +41,7 @@ p {
     align-items: center;
     font-size: 20px;
 
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 .cards {
     margin-top: 30px;
@@ -62,4 +62,9 @@ p {
     margin-bottom:10px;
     justify-content: center;
     align-items: center;
+}
+
+#message-game {
+    font-style: italic;
+    margin: 30px;
 }
