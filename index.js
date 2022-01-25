@@ -32,46 +32,72 @@ let saveP = document.getElementById("p-save")
 
 //Blackjack
 
-let firstCard = 10
-let secondCard = 11
-let cards = [firstCard, secondCard] // Array para armazenar as cartas
-let sum = firstCard + secondCard
+let player = {
+    name: "player",
+    credit: 150
+}
 
+let cards = [] // Array para armazenar as cartas
+let sum = 0
+let isAlive = false // Falso até começar o jogo
 
 messageGame = document.getElementById("message-game");
 sumEl = document.getElementById("message-sum");
 cardsEl = document.getElementById("message-cards");
 result = document.getElementById("message-result");
 
-// Função startGame ainda faz sentido no html
+let playerEl = document.getElementById("player")
+playerEl.textContent = player.name + ": $" + player.credit
+
+// Começando o jogo
 function startGame() {
+    isAlive = true
+    let firstCard = randomCard()
+    let secondCard = randomCard()
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard
     renderGame()
 }
-// foi renomeado de "renderGame" pois não faz sentido uma função "começar jogo" ser chamada novamente com o jogo já começado
- 
+
+// function randomCard()
+function randomCard() {
+    // return Math.floor(Math.random()*13) + 1
+
+    // Agora para validar K, Q, J
+    let randomNumber = Math.floor(Math.random()*13) + 1
+    if(randomNumber > 10) {
+        return 10
+    } else if(randomNumber === 1) {
+        return 11
+    } else {
+        return randomNumber
+    }
+}
+// function renderGame 
 function renderGame() {
     messageGame.textContent = "Nice, lesgo"
     cardsEl.textContent = "Cards: " // Este serve como um "reset" para não repetir a primeira e segunda carta após comprar a terceira. A primeira e a segunda são escritas novamente junto da terceira, sem repeti-lás
     for (card in cards) {
         cardsEl.textContent += cards[card] + " "
     }
-    sumEl.textContent = ("Sum: "+ sum)
 
+    sumEl.textContent = ("Sum: "+ sum)
     if(sum < 21) {
-        result.textContent = "Okay, do you wanna draw another card?"
+        result.textContent = "Ok, você quer pegar uma nova carta?"
     } else if (sum === 21) {
-        result.textContent = "Woah, you've got a BlackJack :))"
+        result.textContent = "Uau! Você conseguiu um BlackJack :))"
     } else {
-        result.textContent = "You're out of the game! :("
+        result.textContent = "Você está fora do jogo :("
+        isAlive = false
     }
 }
 
 // Função comprar nova carta
-
 function drawCard() {
-    let newCard = 2
+    if(isAlive === true) {
+    let newCard = randomCard()
     cards.push(newCard) // Adicionando ao array
     sum += newCard      // Adicionando à soma
     renderGame()
-}
+}}
 
