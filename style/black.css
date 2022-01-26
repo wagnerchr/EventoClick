@@ -68,3 +68,44 @@ button, .btn-start {
     font-style: italic;
     margin: 30px;
 }
+
+/* MENU LATERAL */
+#menu-background {
+    position: fixed;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    background-color: darkgreen;
+    float: left;
+
+    opacity: 0.8;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    background-color: transparent;  /* Assim é possível a opacidade sem afetar os itens do menu */
+    float: left;
+
+    text-align: center;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+} 
+.icon {
+    width: 100px;
+    height: 100px;
+
+    margin-top: 25px;
+}
+
+li {
+    list-style: none;
+}
+
+

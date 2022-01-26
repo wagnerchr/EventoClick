@@ -7,7 +7,7 @@ body {
     background-image: url(/style/images/kien-do-NjT4O7WYmwk-unsplash.jpg) ;
     background-size:cover;
     background-repeat: no-repeat;   
-    height: 100vh;
+    height: 80vh;   /* vh parece preencher a tela diferente da % */
     
     
 
@@ -90,4 +90,57 @@ p {
     margin-left: 250px;
 
 
+}
+
+/* MENU LATERAL */
+#menu-background {
+    position: fixed;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    background-color: darkcyan;
+    float: left;
+
+    opacity: 0.5;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    background-color: transparent;  /* Assim é possível a opacidade sem afetar os itens do menu */
+    float: left;
+
+    text-align: center;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+} 
+.icon {
+    width: 100px;
+    height: 100px;
+
+    margin-top: 25px;
+}
+
+li {
+    list-style: none;
+}
+
+
+
+
+@media (orientation: portrait) {
+
+    p {
+        color: red;
+    }
+    #menu-background {
+        background-color: black;
+    }
+    
 }
